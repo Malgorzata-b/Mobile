@@ -20,9 +20,6 @@
   --Light-grayish-blue: hsl(210, 46%, 95%);
 }
 
-/* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
-2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
-
 body {
   height: 100vh;
   background-color: var(--Light-grayish-blue);
@@ -33,23 +30,25 @@ body {
 
 .Main-container {
   display: grid;
-  /* height: 23rem; */
-  max-width: 1440px;
-  /* border: 2px solid green; */
+
   overflow: hidden;
   border-radius: 0.5rem;
+  margin: 20rem;
+  box-shadow: 2.5rem 3.75rem 3rem rgba(73, 85, 107, 0.2);
 }
 
 .Main-container > * {
-  /* border: 2px solid red; */
   border-radius: 0.5rem;
   width: 100%;
   height: 100%;
 }
-.grid {
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: 1fr 1fr;
-  gap: 1.7rem;
+
+@media only screen and (min-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
 }
 
 .box1 {
@@ -57,33 +56,28 @@ body {
   background: url(images/bg-pattern-quotation.svg) no-repeat;
   background-position: top 0% left 81%;
   background-color: var(--Moderate-violet);
-  box-shadow: 8px 8px 16px var(--Light-gray);
 }
 .box2 {
   background-color: var(--Verydark-grayish-blue);
-  box-shadow: 8px 8px 16px var(--Light-gray);
 }
 .box3 {
   background-color: var(--White);
-  box-shadow: 8px 8px 16px var(--Light-gray);
 }
 .box5 {
   grid-column: 4/5;
   grid-row: 1/3;
   background-color: var(--White);
-  box-shadow: 8px 8px 16px var(--Light-gray);
 }
 .box4 {
   grid-column: 2 / 4;
   background-color: var(--Very-dark-blackish-blue);
-  box-shadow: 8px 8px 16px var(--Light-gray);
 }
 
 h5,
 h2 {
   color: var(--White);
   margin-top: 0.3rem;
-  font-weight: 600px;
+  font-weight: 600;
 }
 h2 {
   font-size: 1.4rem;
@@ -91,13 +85,14 @@ h2 {
 
 h6 {
   color: var(--whiteParagraphs1);
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 p {
   color: var(--whiteParagraphs2);
-  font-weight: 500px;
-  padding-top: 1rem;
+  font-weight: 500;
+  padding-top: 2rem;
+  line-height: 1.3rem;
 }
 .Color-img {
   border: solid 2px var(--moderate-violet-img);
@@ -124,7 +119,7 @@ h3,
 h1 {
   color: var(--Verydark-grayish-blue);
   margin-top: 0.3rem;
-  font-weight: 600px;
+  font-weight: 600;
 }
 h1 {
   font-size: 1.4rem;
@@ -132,23 +127,22 @@ h1 {
 
 h4 {
   color: var(--Verydark-grayish-blue-paragraphs1);
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .color {
   color: var(--Verydark-grayish-blue-paragraphs2);
-  font-weight: 500px;
-  padding-top: 1rem;
+  font-weight: 500;
+  padding-top: 2rem;
 }
 
-@media only screen and (max-width: 375px) {
-  .Main-container > * {
+@media only screen and (max-width: 376px) {
+  .grid > * {
     display: grid;
-    grid-template-columns: 374px;
-    height: 1550px;
-    /* grid-template-rows: 100px 100px 100px 100px 100px; */
-    grid-column: 1 / 6;
+    grid-column: 1;
     grid-row: auto;
     height: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 }
