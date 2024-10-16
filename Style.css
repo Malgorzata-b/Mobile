@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Barlow Semi Condensed;
+  font-size: 13px;
+}
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --moderate-violet-img: #956ec3;
+  --Verydark-grayish-blue: hsl(217, 19%, 35%);
+  --Verydark-grayish-blue-paragraphs1: hsla(217, 19%, 35%, 0.5);
+  --Verydark-grayish-blue-paragraphs2: hsla(217, 19%, 35%, 0.7);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --whiteParagraphs1: hsla(0, 0%, 100%, 0.5);
+  --whiteParagraphs2: hsla(0, 0%, 100%, 0.7);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+
+body {
+  height: 100vh;
+  background-color: var(--Light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Main-container {
+  display: grid;
+  /* height: 23rem; */
+  max-width: 1440px;
+  /* border: 2px solid green; */
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.Main-container > * {
+  /* border: 2px solid red; */
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  box-shadow: 4px 4px 16px var(--Light-gray);
+}
+.grid {
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: 1fr 1fr;
+  gap: 1.7rem;
+}
+
+.box1 {
+  grid-column: 1 / 3;
+  background: url(images/bg-pattern-quotation.svg) no-repeat;
+  background-position: top 0% left 81%;
+  background-color: var(--Moderate-violet);
+}
+.box2 {
+  background-color: var(--Verydark-grayish-blue);
+}
+.box3 {
+  background-color: var(--White);
+}
+.box5 {
+  grid-column: 4/5;
+  grid-row: 1/3;
+  background-color: var(--White);
+}
+.box4 {
+  grid-column: 2 / 4;
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+h5,
+h2 {
+  color: var(--White);
+  margin-top: 0.3rem;
+  font-weight: 600px;
+}
+h2 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  color: var(--whiteParagraphs1);
+  font-weight: 500px;
+}
+
+p {
+  color: var(--whiteParagraphs2);
+  font-weight: 500px;
+  padding-top: 1rem;
+}
+.Color-img {
+  border: solid 2px var(--moderate-violet-img);
+}
+.icona {
+  border-radius: 50%;
+  height: 2.7rem;
+  width: 2.7rem;
+}
+
+.Name-div {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.box {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h3,
+h1 {
+  color: var(--Verydark-grayish-blue);
+  margin-top: 0.3rem;
+  font-weight: 600px;
+}
+h1 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  color: var(--Verydark-grayish-blue-paragraphs1);
+  font-weight: 500px;
+}
+
+.color {
+  color: var(--Verydark-grayish-blue-paragraphs2);
+  font-weight: 500px;
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .Main-container > * {
+    display: flex;
+    flex-direction: column;
+  }
+}
