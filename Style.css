@@ -30,10 +30,10 @@ body {
 
 .Main-container {
   display: grid;
-
+  max-width: 1440px;
   overflow: hidden;
   border-radius: 0.5rem;
-  margin: 20rem;
+  /* margin: 20rem; */
   box-shadow: 2.5rem 3.75rem 3rem rgba(73, 85, 107, 0.2);
 }
 
@@ -137,12 +137,12 @@ h4 {
 }
 
 @media only screen and (max-width: 376px) {
-  .grid > * {
+  .Main-container > * {
     display: grid;
     grid-column: 1;
     grid-row: auto;
     height: 100%;
     width: 100%;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
 }
