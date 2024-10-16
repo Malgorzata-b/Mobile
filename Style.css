@@ -141,10 +141,11 @@ h4 {
   padding-top: 1rem;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 375px) {
   .Main-container > * {
     display: grid;
-    grid-template-columns: 449px;
+    grid-template-columns: 374px;
+    height: 1550px;
     /* grid-template-rows: 100px 100px 100px 100px 100px; */
     grid-column: 1 / 6;
     grid-row: auto;
